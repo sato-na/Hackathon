@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hackathon</string>
+    <string name="title">アプリ名</string>
+    <string name="start">スタート</string>
+    <string name="next">次へ</string>
+    <string name="area">エリアを選んでください</string>
+    <string name="seat">席を選んでください</string>
+    <string name="share">共有</string>
+    <string name="send">ここにいます</string>
+</resources>
