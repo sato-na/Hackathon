@@ -8,7 +8,7 @@
     tools:context=".SeatActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/seat_tb"
+        android:id="@+id/app_tb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/color2"
@@ -20,52 +20,54 @@
         app:title="@string/seat"
         app:titleTextColor="@color/white" />
 
-    <LinearLayout
-        android:id="@+id/other_ll"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/seat_sp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/radio_btn_back"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seat_tb"
-        app:layout_constraintVertical_bias="0.3">
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/share_cl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/other_ll">
-
-        <Button
-            android:id="@+id/share_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/color1"
-            android:text="@string/share"
-            android:textColor="@color/white"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="@+id/share_cl"
-            app:layout_constraintEnd_toEndOf="@+id/share_cl"
-            app:layout_constraintStart_toStartOf="@+id/share_cl"
-            app:layout_constraintTop_toTopOf="@+id/share_cl"></Button>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/app_tb"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/image_im"
-        android:layout_width="278dp"
-        android:layout_height="158dp"
-        app:layout_constraintBottom_toTopOf="@+id/share_cl"
+        android:id="@+id/seat_num_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/share_iv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/other_ll"
-        android:src="@drawable/image" />
+        app:layout_constraintTop_toBottomOf="@+id/seat_sp"
+        app:srcCompat="@drawable/seat_r_num" />
+
+    <ImageView
+        android:id="@+id/share_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/share_r0"
+        app:layout_constraintBottom_toTopOf="@+id/share_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seat_num_iv" />
+
+    <Button
+        android:id="@+id/share_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/color1"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

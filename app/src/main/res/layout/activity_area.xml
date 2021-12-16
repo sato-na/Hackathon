@@ -8,7 +8,7 @@
     tools:context=".AreaActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/seat_tb"
+        android:id="@+id/app_tb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/color2"
@@ -20,40 +20,87 @@
         app:title="@string/area"
         app:titleTextColor="@color/white" />
 
-    <LinearLayout
-        android:id="@+id/other_ll"
+    <Button
+        android:id="@+id/next_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:backgroundTint="@color/color1"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seat_tb"
-        app:layout_constraintVertical_bias="0.3">
+        app:layout_constraintTop_toBottomOf="@+id/area_rg" />
 
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/button_cl"
+    <TextView
+        android:id="@+id/announce_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/announce"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_tb" />
+
+    <RadioGroup
+        android:id="@+id/area_rg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:duplicateParentState="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/other_ll">
+        app:layout_constraintTop_toBottomOf="@+id/announce_tv">
 
-        <Button
-            android:id="@+id/next_btn"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/r_rbtn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/color1"
-            android:text="@string/next"
-            android:textColor="@color/white"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="@+id/button_cl"
-            app:layout_constraintEnd_toEndOf="@+id/button_cl"
-            app:layout_constraintStart_toStartOf="@+id/button_cl"
-            app:layout_constraintTop_toTopOf="@+id/button_cl" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/radio_btn_back"
+            android:buttonTint="@color/color1"
+            android:minHeight="48dp"
+            android:text="@string/r"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/l2_rbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/radio_btn_back"
+            android:buttonTint="@color/color1"
+            android:minHeight="48dp"
+            android:text="@string/l2"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/l1_rbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_btn_back"
+            android:buttonTint="@color/color1"
+            android:minHeight="48dp"
+            android:text="@string/l1"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/area_rg"
+        app:srcCompat="@drawable/area"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

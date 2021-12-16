@@ -1,10 +1,13 @@
 <resources>
-    <string name="app_name">Hackathon</string>
-    <string name="title">アプリ名</string>
+    <string name="app_name">COCO-ORU</string>
+    <string name="title">COCO-ORU</string>
     <string name="start">スタート</string>
     <string name="next">次へ</string>
     <string name="area">エリアを選んでください</string>
+    <string name="announce">中央出入口から入って…</string>
+    <string name="r">右側</string>
+    <string name="l2">左側（2人席）</string>
+    <string name="l1">左側（1人席）</string>
     <string name="seat">席を選んでください</string>
     <string name="share">共有</string>
-    <string name="send">ここにいます</string>
 </resources>
